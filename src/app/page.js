@@ -1,5 +1,9 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import config from "../next.config.js";
+
+// Get the base path from config
+const basePath = config.basePath || '';
 
 export default function Home() {
   return (
@@ -7,7 +11,7 @@ export default function Home() {
       <main className={styles.main}>
         <Image
           className={styles.logo}
-          src="/next.svg"
+          src={`${basePath}/next.svg`}
           alt="Next.js logo"
           width={180}
           height={38}
@@ -29,7 +33,8 @@ export default function Home() {
           >
             <Image
               className={styles.logo}
-              src="/vercel.svg"
+              src={`{basePath}/vercel.s`}
+              
               alt="Vercel logomark"
               width={20}
               height={20}
@@ -54,8 +59,8 @@ export default function Home() {
         >
           <Image
             aria-hidden
-            src="/file.svg"
-            alt="File icon"
+            src={`{basePath}/file.svg`}
+                       alt="File icon"
             width={16}
             height={16}
           />
@@ -68,7 +73,8 @@ export default function Home() {
         >
           <Image
             aria-hidden
-            src="/window.svg"
+            src={`{basePath}/window.s`}
+            
             alt="Window icon"
             width={16}
             height={16}
@@ -82,8 +88,8 @@ export default function Home() {
         >
           <Image
             aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
+            src={`{basePath}/globe.sv`}
+                        alt="Globe icon"
             width={16}
             height={16}
           />
